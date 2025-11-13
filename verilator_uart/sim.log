@@ -1,0 +1,12 @@
+[125000] CMDINTG-FEED: op=0 param=0 size=2 src=0 addr=00000000 mask=f data_intg=7f
+[125000] A: op=0 size=2 addr=0x00000000 mask=0xf cmd_ecc=0x1a data_ecc=0x1e
+[145000] D: d_error=0 (write ack)
+[145000] CMDINTG-FEED: op=0 param=0 size=2 src=0 addr=00000008 mask=f data_intg=7f
+[145000] A: op=0 size=2 addr=0x00000008 mask=0xf cmd_ecc=0x33 data_ecc=0x61
+[165000] D: d_error=0 (write ack)
+[165000] CMDINTG-FEED (GET): op=4 param=0 size=2 src=0 addr=00000000 mask=f data_intg=2a
+[165000] A: op=4 size=2 addr=0x00000000 mask=0xf cmd_ecc=0xf
+[185000] D: d_error=0 d_data=0x00000145
+[185000] INTR_STATE = 0x00000145
+[185000] CMDINTG-FEED: op=0 param=0 size=2 src=0 addr=00000020 mask=f data_intg=7f
+[185000] A: op=0 size=2 addr=0x00000020 mask=0xf cmd_ecc=0x2b data_ecc=0x67

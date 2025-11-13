@@ -1,0 +1,2297 @@
+==> Packages (priority first):
+  PRIM_CORE_PKGS = /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_util_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv 
+  TLUL_PKG       = /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv
+verilator -Wall -Wno-UNOPTFLAT -Wno-WIDTHEXPAND -Wno-INITIALDLY -sv --trace --timing --cc --exe --build \
+-I/home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl -I/home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl -I/home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl \
+rtl/top_pkg.sv  \
+/home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_util_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_count_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pad_wrapper_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1p_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_2p_pkg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rom_pkg.sv \
+rtl/top_racl_pkg.sv \
+/home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_receiver.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_to_diff.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_fixed.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_ppc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_tree.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_tree_dup.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_duplex.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_round.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_sbox.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_assert.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_blanker.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cdc_rand_delay.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_gating_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_meas.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_timeout.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_count.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_crc32.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_decode.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_encode.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_to_alert.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_dom_and_2share.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_double_lfsr.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_edge_detector.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async_simple.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async_sram_adapter.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync_cnt.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_filter.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_filter_ctr.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_flop_macros.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_gate_gen.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_gf_mult.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_intr_hw.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_keccak.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_leading_one_ppc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_lfsr.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_max_tree.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_msb_extend.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_sender.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_multibit_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_check.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_mux.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_packer.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_packer_fifo.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_present.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_prince.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pulse_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_racl_error_arb.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_cdc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_cdc_arb.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_we_check.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sec_anchor_buf.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sec_anchor_flop.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_22_16_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_22_16_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_28_22_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_28_22_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_39_32_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_39_32_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_64_57_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_64_57_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_72_64_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_72_64_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_22_16_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_39_32_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_72_64_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_76_68_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_76_68_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_22_16_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_22_16_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_28_22_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_28_22_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_39_32_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_39_32_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_64_57_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_64_57_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_72_64_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_72_64_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_22_16_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_22_16_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_39_32_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_39_32_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_72_64_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_72_64_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_76_68_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_76_68_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_32.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pad.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_slicer.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sparse_fsm_flop.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_arb.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_ext.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subst_perm.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sum_tree.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_reqack.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_reqack_data.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_slow_fast.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_xoshiro256pp.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_and2.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_buf.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_buf.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_div.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_gating.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_inv.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_mux2.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_2sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_en.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_no_rst.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_pad_attr.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_pad_wrapper.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1p.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1r1w.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_2p.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rom.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rst_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_usb_diff_rx.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_xnor2.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_xor2.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/sram2tlul.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_assert.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_assert_multiple.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_chk.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_gen.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_dec.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_enc.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err_resp.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_request_loopback.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_chk.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_gen.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_1n.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv \
+rtl/uart_reg_pkg.sv rtl/uart_reg_top.sv rtl/uart_tx.sv rtl/uart_rx.sv rtl/uart_core.sv rtl/uart.sv \
+rtl/top_uart_tb.sv rtl/tlul_host.sv sim/sim_main.cpp \
+--top-module top_uart_tb \
+-o Vtop_uart_tb
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_receiver.sv:87:6: Cell pin connected by name with empty reference: 'rise_o'
+   87 |     .rise_o   (                    ),
+      |      ^~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.020
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_receiver.sv:88:6: Cell pin connected by name with empty reference: 'fall_o'
+   88 |     .fall_o   (                    ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_receiver.sv:89:6: Cell pin connected by name with empty reference: 'event_o'
+   89 |     .event_o  (                    ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:94:6: Cell pin connected by name with empty reference: 'level_o'
+   94 |     .level_o  (             ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:95:6: Cell pin connected by name with empty reference: 'rise_o'
+   95 |     .rise_o   (             ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:96:6: Cell pin connected by name with empty reference: 'fall_o'
+   96 |     .fall_o   (             ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:122:6: Cell pin connected by name with empty reference: 'rise_o'
+  122 |     .rise_o   (            ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:123:6: Cell pin connected by name with empty reference: 'fall_o'
+  123 |     .fall_o   (            ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:124:6: Cell pin connected by name with empty reference: 'event_o'
+  124 |     .event_o  (            ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_to_diff.sv:43:6: Cell pin connected by name with empty reference: 'ping_ok_o'
+   43 |     .ping_ok_o    (),
+      |      ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_duplex.sv:185:6: Cell pin connected by name with empty reference: 'cnt_after_commit_o'
+  185 |     .cnt_after_commit_o(),
+      |      ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_to_alert.sv:65:6: Cell pin connected by name with empty reference: 'alert_ack_o'
+   65 |     .alert_ack_o   (),
+      |      ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_to_alert.sv:66:6: Cell pin connected by name with empty reference: 'alert_state_o'
+   66 |     .alert_state_o (),
+      |      ^~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv:87:6: Cell pin connected by name with empty reference: 'rise_o'
+   87 |     .rise_o   (                 ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv:88:6: Cell pin connected by name with empty reference: 'fall_o'
+   88 |     .fall_o   (                 ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv:89:6: Cell pin connected by name with empty reference: 'event_o'
+   89 |     .event_o  (                 ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv:125:6: Cell pin connected by name with empty reference: 'cnt_after_commit_o'
+  125 |     .cnt_after_commit_o(),
+      |      ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_sender.sv:70:6: Cell pin connected by name with empty reference: 'rise_o'
+   70 |     .rise_o   (                 ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_sender.sv:71:6: Cell pin connected by name with empty reference: 'fall_o'
+   71 |     .fall_o   (                 ),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_sender.sv:72:6: Cell pin connected by name with empty reference: 'event_o'
+   72 |     .event_o  (                 ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync_cnt.sv:91:8: Cell pin connected by name with empty reference: 'cnt_after_commit_o'
+   91 |       .cnt_after_commit_o(),
+      |        ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync_cnt.sv:111:8: Cell pin connected by name with empty reference: 'cnt_after_commit_o'
+  111 |       .cnt_after_commit_o(),
+      |        ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_packer.sv:147:8: Cell pin connected by name with empty reference: 'cnt_after_commit_o'
+  147 |       .cnt_after_commit_o (          ),  
+      |        ^~~~~~~~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_racl_error_arb.sv:37:6: Cell pin connected by name with empty reference: 'idx_o'
+   37 |     .idx_o    (                  ),
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_racl_error_arb.sv:38:6: Cell pin connected by name with empty reference: 'valid_o'
+   38 |     .valid_o  (                  ),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:96:8: Cell pin connected by name with empty reference: 'idx_o'
+   96 |       .idx_o     (             ),
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:112:8: Cell pin connected by name with empty reference: 'idx_o'
+  112 |       .idx_o     (             ),
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:138:6: Cell pin connected by name with empty reference: 'wready_o'
+  138 |     .wready_o (),      
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:140:6: Cell pin connected by name with empty reference: 'rvalid_o'
+  140 |     .rvalid_o (),      
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:143:6: Cell pin connected by name with empty reference: 'full_o'
+  143 |     .full_o   (),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:144:6: Cell pin connected by name with empty reference: 'depth_o'
+  144 |     .depth_o  (),      
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:145:6: Cell pin connected by name with empty reference: 'err_o'
+  145 |     .err_o    ()
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:128:6: Cell pin connected by name with empty reference: 'qe'
+  128 |     .qe       (           ),
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:130:6: Cell pin connected by name with empty reference: 'ds'
+  130 |     .ds       (           ),
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:131:6: Cell pin connected by name with empty reference: 'qs'
+  131 |     .qs       (           )
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:154:6: Cell pin connected by name with empty reference: 'qe'
+  154 |     .qe       (                 ),
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:156:6: Cell pin connected by name with empty reference: 'ds'
+  156 |     .ds       (                 ),
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:157:6: Cell pin connected by name with empty reference: 'qs'
+  157 |     .qs       (                 )
+      |      ^~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_chk.sv:26:6: Cell pin connected by name with empty reference: 'data_o'
+   26 |     .data_o(),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_chk.sv:27:6: Cell pin connected by name with empty reference: 'syndrome_o'
+   27 |     .syndrome_o(),
+      |      ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_dec.sv:20:6: Cell pin connected by name with empty reference: 'data_o'
+   20 |     .data_o(),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_dec.sv:21:6: Cell pin connected by name with empty reference: 'syndrome_o'
+   21 |     .syndrome_o(),
+      |      ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv:57:6: Cell pin connected by name with empty reference: 'wdepth_o'
+   57 |     .wdepth_o      (),
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv:58:6: Cell pin connected by name with empty reference: 'rdepth_o'
+   58 |     .rdepth_o      ()
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv:94:6: Cell pin connected by name with empty reference: 'wdepth_o'
+   94 |     .wdepth_o      (),
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv:95:6: Cell pin connected by name with empty reference: 'rdepth_o'
+   95 |     .rdepth_o      ()
+      |      ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:58:6: Cell pin connected by name with empty reference: 'full_o'
+   58 |     .full_o        (),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:59:6: Cell pin connected by name with empty reference: 'depth_o'
+   59 |     .depth_o       (),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:60:6: Cell pin connected by name with empty reference: 'err_o'
+   60 |     .err_o         ());
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:93:6: Cell pin connected by name with empty reference: 'full_o'
+   93 |     .full_o        (),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:94:6: Cell pin connected by name with empty reference: 'depth_o'
+   94 |     .depth_o       (),
+      |      ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:95:6: Cell pin connected by name with empty reference: 'err_o'
+   95 |     .err_o         ());
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_chk.sv:27:6: Cell pin connected by name with empty reference: 'data_o'
+   27 |     .data_o(),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_chk.sv:28:6: Cell pin connected by name with empty reference: 'syndrome_o'
+   28 |     .syndrome_o(),
+      |      ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_1n.sv:99:6: Cell pin connected by name with empty reference: 'spare_rsp_o'
+   99 |     .spare_rsp_o ());
+      |      ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_1n.sv:222:8: Cell pin connected by name with empty reference: 'spare_req_o'
+  222 |       .spare_req_o (),
+      |        ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_1n.sv:224:8: Cell pin connected by name with empty reference: 'spare_rsp_o'
+  224 |       .spare_rsp_o ());
+      |        ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:135:8: Cell pin connected by name with empty reference: 'spare_req_o'
+  135 |       .spare_req_o (),
+      |        ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:137:8: Cell pin connected by name with empty reference: 'spare_rsp_o'
+  137 |       .spare_rsp_o ()
+      |        ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:156:6: Cell pin connected by name with empty reference: 'spare_req_o'
+  156 |     .spare_req_o (),
+      |      ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:158:6: Cell pin connected by name with empty reference: 'spare_rsp_o'
+  158 |     .spare_rsp_o ()
+      |      ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:179:8: Cell pin connected by name with empty reference: 'idx_o'
+  179 |       .idx_o     (             ),
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:195:8: Cell pin connected by name with empty reference: 'idx_o'
+  195 |       .idx_o     (             ),
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:530:8: Cell pin connected by name with empty reference: 'rvalid_o'
+  530 |       .rvalid_o(),
+      |        ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:533:8: Cell pin connected by name with empty reference: 'full_o'
+  533 |       .full_o(),
+      |        ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:534:8: Cell pin connected by name with empty reference: 'depth_o'
+  534 |       .depth_o(),
+      |        ^~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:535:8: Cell pin connected by name with empty reference: 'err_o'
+  535 |       .err_o()
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:649:8: Cell pin connected by name with empty reference: 'rvalid_o'
+  649 |       .rvalid_o(),
+      |        ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:652:8: Cell pin connected by name with empty reference: 'full_o'
+  652 |       .full_o(),
+      |        ^~~~~~
+%Warning-PINCONNECTEMPTY: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:654:8: Cell pin connected by name with empty reference: 'err_o'
+  654 |       .err_o()
+      |        ^~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:114:6: Cell pin connected by name with empty reference: 'intg_error_o'
+  114 |     .intg_error_o(),
+      |      ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:256:6: Cell pin connected by name with empty reference: 'qe'
+  256 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:258:6: Cell pin connected by name with empty reference: 'ds'
+  258 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:283:6: Cell pin connected by name with empty reference: 'qe'
+  283 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:285:6: Cell pin connected by name with empty reference: 'ds'
+  285 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:310:6: Cell pin connected by name with empty reference: 'qe'
+  310 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:312:6: Cell pin connected by name with empty reference: 'ds'
+  312 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:337:6: Cell pin connected by name with empty reference: 'qe'
+  337 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:339:6: Cell pin connected by name with empty reference: 'ds'
+  339 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:364:6: Cell pin connected by name with empty reference: 'qe'
+  364 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:366:6: Cell pin connected by name with empty reference: 'ds'
+  366 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:391:6: Cell pin connected by name with empty reference: 'qe'
+  391 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:393:6: Cell pin connected by name with empty reference: 'ds'
+  393 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:418:6: Cell pin connected by name with empty reference: 'qe'
+  418 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:420:6: Cell pin connected by name with empty reference: 'ds'
+  420 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:445:6: Cell pin connected by name with empty reference: 'qe'
+  445 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:447:6: Cell pin connected by name with empty reference: 'ds'
+  447 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:472:6: Cell pin connected by name with empty reference: 'qe'
+  472 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:474:6: Cell pin connected by name with empty reference: 'ds'
+  474 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:501:6: Cell pin connected by name with empty reference: 'qe'
+  501 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:503:6: Cell pin connected by name with empty reference: 'ds'
+  503 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:528:6: Cell pin connected by name with empty reference: 'qe'
+  528 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:530:6: Cell pin connected by name with empty reference: 'ds'
+  530 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:555:6: Cell pin connected by name with empty reference: 'qe'
+  555 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:557:6: Cell pin connected by name with empty reference: 'ds'
+  557 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:582:6: Cell pin connected by name with empty reference: 'qe'
+  582 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:584:6: Cell pin connected by name with empty reference: 'ds'
+  584 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:609:6: Cell pin connected by name with empty reference: 'qe'
+  609 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:611:6: Cell pin connected by name with empty reference: 'ds'
+  611 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:636:6: Cell pin connected by name with empty reference: 'qe'
+  636 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:638:6: Cell pin connected by name with empty reference: 'ds'
+  638 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:663:6: Cell pin connected by name with empty reference: 'qe'
+  663 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:665:6: Cell pin connected by name with empty reference: 'ds'
+  665 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:690:6: Cell pin connected by name with empty reference: 'qe'
+  690 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:692:6: Cell pin connected by name with empty reference: 'ds'
+  692 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:717:6: Cell pin connected by name with empty reference: 'qe'
+  717 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:719:6: Cell pin connected by name with empty reference: 'ds'
+  719 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:738:6: Cell pin connected by name with empty reference: 'qre'
+  738 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:741:6: Cell pin connected by name with empty reference: 'ds'
+  741 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:742:6: Cell pin connected by name with empty reference: 'qs'
+  742 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:754:6: Cell pin connected by name with empty reference: 'qre'
+  754 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:757:6: Cell pin connected by name with empty reference: 'ds'
+  757 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:758:6: Cell pin connected by name with empty reference: 'qs'
+  758 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:770:6: Cell pin connected by name with empty reference: 'qre'
+  770 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:773:6: Cell pin connected by name with empty reference: 'ds'
+  773 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:774:6: Cell pin connected by name with empty reference: 'qs'
+  774 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:786:6: Cell pin connected by name with empty reference: 'qre'
+  786 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:789:6: Cell pin connected by name with empty reference: 'ds'
+  789 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:790:6: Cell pin connected by name with empty reference: 'qs'
+  790 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:802:6: Cell pin connected by name with empty reference: 'qre'
+  802 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:805:6: Cell pin connected by name with empty reference: 'ds'
+  805 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:806:6: Cell pin connected by name with empty reference: 'qs'
+  806 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:818:6: Cell pin connected by name with empty reference: 'qre'
+  818 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:821:6: Cell pin connected by name with empty reference: 'ds'
+  821 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:822:6: Cell pin connected by name with empty reference: 'qs'
+  822 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:834:6: Cell pin connected by name with empty reference: 'qre'
+  834 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:837:6: Cell pin connected by name with empty reference: 'ds'
+  837 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:838:6: Cell pin connected by name with empty reference: 'qs'
+  838 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:850:6: Cell pin connected by name with empty reference: 'qre'
+  850 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:853:6: Cell pin connected by name with empty reference: 'ds'
+  853 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:854:6: Cell pin connected by name with empty reference: 'qs'
+  854 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:866:6: Cell pin connected by name with empty reference: 'qre'
+  866 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:869:6: Cell pin connected by name with empty reference: 'ds'
+  869 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:870:6: Cell pin connected by name with empty reference: 'qs'
+  870 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:886:6: Cell pin connected by name with empty reference: 'qre'
+  886 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:889:6: Cell pin connected by name with empty reference: 'ds'
+  889 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:890:6: Cell pin connected by name with empty reference: 'qs'
+  890 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:915:6: Cell pin connected by name with empty reference: 'qe'
+  915 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:917:6: Cell pin connected by name with empty reference: 'ds'
+  917 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:942:6: Cell pin connected by name with empty reference: 'qe'
+  942 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:944:6: Cell pin connected by name with empty reference: 'ds'
+  944 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:969:6: Cell pin connected by name with empty reference: 'qe'
+  969 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:971:6: Cell pin connected by name with empty reference: 'ds'
+  971 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:996:6: Cell pin connected by name with empty reference: 'qe'
+  996 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:998:6: Cell pin connected by name with empty reference: 'ds'
+  998 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1023:6: Cell pin connected by name with empty reference: 'qe'
+ 1023 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1025:6: Cell pin connected by name with empty reference: 'ds'
+ 1025 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1050:6: Cell pin connected by name with empty reference: 'qe'
+ 1050 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1052:6: Cell pin connected by name with empty reference: 'ds'
+ 1052 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1077:6: Cell pin connected by name with empty reference: 'qe'
+ 1077 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1079:6: Cell pin connected by name with empty reference: 'ds'
+ 1079 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1104:6: Cell pin connected by name with empty reference: 'qe'
+ 1104 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1106:6: Cell pin connected by name with empty reference: 'ds'
+ 1106 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1131:6: Cell pin connected by name with empty reference: 'qe'
+ 1131 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1133:6: Cell pin connected by name with empty reference: 'ds'
+ 1133 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1150:6: Cell pin connected by name with empty reference: 'qe'
+ 1150 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1152:6: Cell pin connected by name with empty reference: 'ds'
+ 1152 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1165:6: Cell pin connected by name with empty reference: 'qe'
+ 1165 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1167:6: Cell pin connected by name with empty reference: 'ds'
+ 1167 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1180:6: Cell pin connected by name with empty reference: 'qe'
+ 1180 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1182:6: Cell pin connected by name with empty reference: 'ds'
+ 1182 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1195:6: Cell pin connected by name with empty reference: 'qe'
+ 1195 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1197:6: Cell pin connected by name with empty reference: 'ds'
+ 1197 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1210:6: Cell pin connected by name with empty reference: 'qe'
+ 1210 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1212:6: Cell pin connected by name with empty reference: 'ds'
+ 1212 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1225:6: Cell pin connected by name with empty reference: 'qe'
+ 1225 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1227:6: Cell pin connected by name with empty reference: 'ds'
+ 1227 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1241:6: Cell pin connected by name with empty reference: 'qe'
+ 1241 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1243:6: Cell pin connected by name with empty reference: 'ds'
+ 1243 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1280:6: Cell pin connected by name with empty reference: 'ds'
+ 1280 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1283:6: Cell pin connected by name with empty reference: 'qs'
+ 1283 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1321:6: Cell pin connected by name with empty reference: 'ds'
+ 1321 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1324:6: Cell pin connected by name with empty reference: 'qs'
+ 1324 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1349:6: Cell pin connected by name with empty reference: 'ds'
+ 1349 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1352:6: Cell pin connected by name with empty reference: 'qs'
+ 1352 |     .qs     ()
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1377:6: Cell pin connected by name with empty reference: 'ds'
+ 1377 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1405:6: Cell pin connected by name with empty reference: 'ds'
+ 1405 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1422:6: Cell pin connected by name with empty reference: 'qre'
+ 1422 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1423:6: Cell pin connected by name with empty reference: 'qe'
+ 1423 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1424:6: Cell pin connected by name with empty reference: 'q'
+ 1424 |     .q      (),
+      |      ^
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1425:6: Cell pin connected by name with empty reference: 'ds'
+ 1425 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1437:6: Cell pin connected by name with empty reference: 'qre'
+ 1437 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1438:6: Cell pin connected by name with empty reference: 'qe'
+ 1438 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1439:6: Cell pin connected by name with empty reference: 'q'
+ 1439 |     .q      (),
+      |      ^
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1440:6: Cell pin connected by name with empty reference: 'ds'
+ 1440 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1465:6: Cell pin connected by name with empty reference: 'qe'
+ 1465 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1467:6: Cell pin connected by name with empty reference: 'ds'
+ 1467 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1492:6: Cell pin connected by name with empty reference: 'qe'
+ 1492 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1494:6: Cell pin connected by name with empty reference: 'ds'
+ 1494 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1509:6: Cell pin connected by name with empty reference: 'qre'
+ 1509 |     .qre    (),
+      |      ^~~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1510:6: Cell pin connected by name with empty reference: 'qe'
+ 1510 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1511:6: Cell pin connected by name with empty reference: 'q'
+ 1511 |     .q      (),
+      |      ^
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1512:6: Cell pin connected by name with empty reference: 'ds'
+ 1512 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1537:6: Cell pin connected by name with empty reference: 'qe'
+ 1537 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1539:6: Cell pin connected by name with empty reference: 'ds'
+ 1539 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1564:6: Cell pin connected by name with empty reference: 'qe'
+ 1564 |     .qe     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_reg_top.sv:1566:6: Cell pin connected by name with empty reference: 'ds'
+ 1566 |     .ds     (),
+      |      ^~
+%Warning-PINCONNECTEMPTY: rtl/uart_core.sv:197:6: Cell pin connected by name with empty reference: 'full_o'
+  197 |     .full_o (),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_core.sv:201:6: Cell pin connected by name with empty reference: 'err_o'
+  201 |     .err_o   ()
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_core.sv:298:6: Cell pin connected by name with empty reference: 'full_o'
+  298 |     .full_o (),
+      |      ^~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart_core.sv:302:6: Cell pin connected by name with empty reference: 'err_o'
+  302 |     .err_o   ()
+      |      ^~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart.sv:112:8: Cell pin connected by name with empty reference: 'alert_ack_o'
+  112 |       .alert_ack_o   (               ),
+      |        ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: rtl/uart.sv:113:8: Cell pin connected by name with empty reference: 'alert_state_o'
+  113 |       .alert_state_o (               ),
+      |        ^~~~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/top_pkg.sv:8:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | package top_pkg;
+      |         ^~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pkg.sv:8:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | package prim_pkg;
+      |         ^~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_util_pkg.sv:9:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | package prim_util_pkg;
+      |         ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi_pkg.sv:15:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | package prim_mubi_pkg;
+      |         ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_subreg_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_alert_pkg;
+      |         ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:8:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | package prim_secded_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:6:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    6 | package tlul_pkg;
+      |         ^~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_ascon_pkg;
+      |         ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:17:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | package prim_cipher_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_count_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_count_pkg;
+      |         ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_esc_pkg;
+      |         ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pad_wrapper_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_pad_wrapper_pkg;
+      |         ^~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:6:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    6 | package prim_sha2_pkg;
+      |         ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:5:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | package prim_trivium_pkg;
+      |         ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1p_pkg.sv:6:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    6 | package prim_ram_1p_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_2p_pkg.sv:6:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    6 | package prim_ram_2p_pkg;
+      |         ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rom_pkg.sv:6:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    6 | package prim_rom_pkg;
+      |         ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/top_racl_pkg.sv:1:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    1 | package top_racl_pkg;
+      |         ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_receiver.sv:32:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   32 | module prim_alert_receiver
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_sender.sv:44:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   44 | module prim_alert_sender
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_to_diff.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_alert_to_diff #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_fixed.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module prim_arbiter_fixed #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_ppc.sv:27:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   27 | module prim_arbiter_ppc #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_tree.sv:34:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   34 | module prim_arbiter_tree #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_arbiter_tree_dup.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_arbiter_tree_dup #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_duplex.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module prim_ascon_duplex
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_round.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_ascon_round (
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_sbox.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_ascon_sbox (
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_blanker.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cdc_rand_delay.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module prim_cdc_rand_delay #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_gating_sync.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_clock_gating_sync (
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_meas.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_clock_meas #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_clock_timeout.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   12 | module prim_clock_timeout #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_count.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module prim_count
+      |        ^~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_crc32.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module prim_crc32 #(
+      |        ^~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_decode.sv:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module prim_diff_decode #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_encode.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_diff_encode (
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_diff_to_alert.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_diff_to_alert #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_dom_and_2share.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module prim_dom_and_2share #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_double_lfsr.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_double_lfsr #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_edge_detector.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_edge_detector #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_receiver.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module prim_esc_receiver
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_sender.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module prim_esc_sender
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_fifo_async #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async_simple.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_fifo_async_simple #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_async_sram_adapter.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_fifo_async_sram_adapter #(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_fifo_sync #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_fifo_sync_cnt.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_fifo_sync_cnt #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_filter.sv:13:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   13 | module prim_filter #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_filter_ctr.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_filter_ctr #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_gate_gen.sv:35:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_gf_mult.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module prim_gf_mult #(
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_intr_hw.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module prim_intr_hw # (
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_keccak.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_keccak #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_leading_one_ppc.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_leading_one_ppc #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_lfsr.sv:29:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   29 | module prim_lfsr #(
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_max_tree.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module prim_max_tree #(
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_msb_extend.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_msb_extend # (
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi12_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi12_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi12_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi12_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi16_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi16_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi16_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi16_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi20_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi20_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi20_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi20_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi24_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi24_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi24_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi24_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi28_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi28_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi28_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi28_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi32_dec
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi32_sender
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi32_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi32_sync
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi4_dec
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi4_sender
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi4_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi4_sync
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_dec.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi8_dec
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_sender.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_mubi8_sender
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_mubi8_sync.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_mubi8_sync
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_multibit_sync.sv:40:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   40 | module prim_multibit_sync #(
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_check.sv:21:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   21 | module prim_onehot_check #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_enc.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_onehot_enc #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_mux.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_onehot_mux #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_packer.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_packer #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_packer_fifo.sv:44:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   44 | module prim_packer_fifo #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_present.sv:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   25 | module prim_present #(
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_prince.sv:26:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   26 | module prim_prince #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pulse_sync.sv:16:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   16 | module prim_pulse_sync (
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_racl_error_arb.sv:5:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | module prim_racl_error_arb
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_cdc.sv:28:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   28 | module prim_reg_cdc #(
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_cdc_arb.sv:52:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   52 | module prim_reg_cdc_arb #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_reg_we_check.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_reg_we_check #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sec_anchor_buf.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_sec_anchor_buf #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sec_anchor_flop.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_sec_anchor_flop #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_22_16_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_22_16_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_22_16_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_22_16_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_28_22_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_28_22_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_28_22_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_28_22_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_64_57_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_64_57_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_64_57_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_64_57_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_72_64_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_72_64_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_72_64_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_72_64_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_22_16_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_22_16_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_22_16_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_72_64_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_72_64_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_72_64_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_76_68_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_76_68_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_hamming_76_68_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_hamming_76_68_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_22_16_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_22_16_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_22_16_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_22_16_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_28_22_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_28_22_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_28_22_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_28_22_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_64_57_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_64_57_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_64_57_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_64_57_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_72_64_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_72_64_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_72_64_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_72_64_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_22_16_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_22_16_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_22_16_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_22_16_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_39_32_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_39_32_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_39_32_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_39_32_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_72_64_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_72_64_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_72_64_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_72_64_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_76_68_dec.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_76_68_dec (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_inv_hamming_76_68_enc.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_secded_inv_hamming_76_68_enc (
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_sha2 import prim_sha2_pkg::*;
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_32.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_sha2_32 import prim_sha2_pkg::*;
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pad.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_sha2_pad import prim_sha2_pkg::*;
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_slicer.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_slicer #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sparse_fsm_flop.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_sparse_fsm_flop #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sram_arbiter.sv:14:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   14 | module prim_sram_arbiter #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_subreg
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_arb.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_subreg_arb
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_ext.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_subreg_ext #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subreg_shadow.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_subreg_shadow
+      |        ^~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_subst_perm.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   12 | module prim_subst_perm #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sum_tree.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module prim_sum_tree #(
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_reqack.sv:34:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   34 | module prim_sync_reqack #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_reqack_data.sv:19:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   19 | module prim_sync_reqack_data #(
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sync_slow_fast.sv:15:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   15 | module prim_sync_slow_fast #(
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium.sv:59:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   59 | module prim_trivium import prim_trivium_pkg::*;
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_xoshiro256pp.sv:17:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   17 | module prim_xoshiro256pp #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_and2.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_and2 #(
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_buf.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_buf #(
+      |        ^~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_buf.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_clock_buf #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_div.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_clock_div #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_gating.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_clock_gating #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_inv.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_clock_inv #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_clock_mux2.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_clock_mux2 #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_flop #(
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_2sync.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_flop_2sync #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_en.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_flop_en #(
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_flop_no_rst.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_flop_no_rst #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_pad_attr.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module prim_pad_attr
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_pad_wrapper.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_pad_wrapper
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1p.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_ram_1p import prim_ram_1p_pkg::*; #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1r1w.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_ram_1r1w import prim_ram_2p_pkg::*; #(
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_2p.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module prim_ram_2p import prim_ram_2p_pkg::*; #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rom.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_rom import prim_rom_pkg::*; #(
+      |        ^~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rst_sync.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_rst_sync #(
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_usb_diff_rx.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module prim_usb_diff_rx #(
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_xnor2.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_xnor2 #(
+      |        ^~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_xor2.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module prim_xor2 #(
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/sram2tlul.sv:12:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   12 | module sram2tlul #(
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_assert.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module tlul_assert #(
+      |        ^~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_assert_multiple.sv:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module tlul_assert_multiple #(
+      |        ^~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_chk.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_cmd_intg_chk import tlul_pkg::*; (
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_cmd_intg_gen.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_cmd_intg_gen import tlul_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_dec.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_data_integ_dec import tlul_pkg::*; (
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_data_integ_enc.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_data_integ_enc import tlul_pkg::*; (
+      |        ^~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module tlul_err import tlul_pkg::*; (
+      |        ^~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err_resp.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module tlul_err_resp #(
+      |        ^~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_async.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_fifo_async #(
+      |        ^~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_fifo_sync.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module tlul_fifo_sync #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_request_loopback.sv:5:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    5 | module tlul_request_loopback
+      |        ^~~~~~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_chk.sv:11:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   11 | module tlul_rsp_intg_chk import tlul_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_rsp_intg_gen.sv:24:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   24 | module tlul_rsp_intg_gen import tlul_pkg::*; #(
+      |        ^~~~~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_1n.sv:44:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   44 | module tlul_socket_1n #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_socket_m1.sv:25:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   25 | module tlul_socket_m1 #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_sram_byte.sv:18:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   18 | module tlul_sram_byte import tlul_pkg::*; #(
+      |        ^~~~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart_reg_pkg.sv:7:9: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | package uart_reg_pkg;
+      |         ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart_reg_top.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module uart_reg_top
+      |        ^~~~~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart_tx.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module uart_tx (
+      |        ^~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart_rx.sv:8:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    8 | module uart_rx (
+      |        ^~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart_core.sv:10:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   10 | module uart_core (
+      |        ^~~~~~~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: rtl/uart.sv:9:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    9 | module uart
+      |        ^~~~
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-TIMESCALEMOD: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_adapter_reg.sv:95:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   95 | module tlul_adapter_reg
+      |        ^~~~~~~~~~~~~~~~
+                       rtl/uart_reg_top.sv:108:1: ... note: In file included from 'uart_reg_top.sv'
+                       rtl/top_uart_tb.sv:3:8: ... Location of module with timescale
+    3 | module top_uart_tb;
+      |        ^~~~~~~~~~~
+%Warning-VARHIDDEN: rtl/top_uart_tb.sv:32:18: Declaration of signal hides declaration in upper scope: 'NumAlerts'
+   32 |   localparam int NumAlerts = uart_reg_pkg::NumAlerts;  
+      |                  ^~~~~~~~~
+                    rtl/uart_reg_pkg.sv:12:17: ... Location of original declaration
+   12 |   parameter int NumAlerts = 1;
+      |                 ^~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:28:29: Signal is not used: 'cio_tx_en_o'
+                                               : ... note: In instance 'top_uart_tb'
+   28 |   logic cio_rx_i, cio_tx_o, cio_tx_en_o;
+      |                             ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:34:30: Signal is not used: 'alert_tx_o'
+                                               : ... note: In instance 'top_uart_tb'
+   34 |   alert_tx_t [NumAlerts-1:0] alert_tx_o;
+      |                              ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:41:21: Signal is not used: 'racl_error_o'
+                                               : ... note: In instance 'top_uart_tb'
+   41 |   racl_error_log_t  racl_error_o;
+      |                     ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:44:9: Signal is not used: 'intr_tx_watermark_o'
+                                              : ... note: In instance 'top_uart_tb'
+   44 |   logic intr_tx_watermark_o, intr_tx_empty_o, intr_rx_watermark_o, intr_tx_done_o;
+      |         ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:44:30: Signal is not used: 'intr_tx_empty_o'
+                                               : ... note: In instance 'top_uart_tb'
+   44 |   logic intr_tx_watermark_o, intr_tx_empty_o, intr_rx_watermark_o, intr_tx_done_o;
+      |                              ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:44:47: Signal is not used: 'intr_rx_watermark_o'
+                                               : ... note: In instance 'top_uart_tb'
+   44 |   logic intr_tx_watermark_o, intr_tx_empty_o, intr_rx_watermark_o, intr_tx_done_o;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:44:68: Signal is not used: 'intr_tx_done_o'
+                                               : ... note: In instance 'top_uart_tb'
+   44 |   logic intr_tx_watermark_o, intr_tx_empty_o, intr_rx_watermark_o, intr_tx_done_o;
+      |                                                                    ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:45:9: Signal is not used: 'intr_rx_overflow_o'
+                                              : ... note: In instance 'top_uart_tb'
+   45 |   logic intr_rx_overflow_o, intr_rx_frame_err_o, intr_rx_break_err_o, intr_rx_timeout_o, intr_rx_parity_err_o;
+      |         ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:45:29: Signal is not used: 'intr_rx_frame_err_o'
+                                               : ... note: In instance 'top_uart_tb'
+   45 |   logic intr_rx_overflow_o, intr_rx_frame_err_o, intr_rx_break_err_o, intr_rx_timeout_o, intr_rx_parity_err_o;
+      |                             ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:45:50: Signal is not used: 'intr_rx_break_err_o'
+                                               : ... note: In instance 'top_uart_tb'
+   45 |   logic intr_rx_overflow_o, intr_rx_frame_err_o, intr_rx_break_err_o, intr_rx_timeout_o, intr_rx_parity_err_o;
+      |                                                  ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:45:71: Signal is not used: 'intr_rx_timeout_o'
+                                               : ... note: In instance 'top_uart_tb'
+   45 |   logic intr_rx_overflow_o, intr_rx_frame_err_o, intr_rx_break_err_o, intr_rx_timeout_o, intr_rx_parity_err_o;
+      |                                                                       ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:45:90: Signal is not used: 'intr_rx_parity_err_o'
+                                               : ... note: In instance 'top_uart_tb'
+   45 |   logic intr_rx_overflow_o, intr_rx_frame_err_o, intr_rx_break_err_o, intr_rx_timeout_o, intr_rx_parity_err_o;
+      |                                                                                          ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:46:9: Signal is not used: 'lsio_trigger_o'
+                                              : ... note: In instance 'top_uart_tb'
+   46 |   logic lsio_trigger_o;
+      |         ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:111:16: Bits of signal are not used: 'NCO'[31:16]
+                                                : ... note: In instance 'top_uart_tb'
+  111 |   int unsigned NCO;
+      |                ^~~
+%Warning-UNUSEDSIGNAL: rtl/top_uart_tb.sv:112:16: Bits of signal are not used: 'r'[31:8]
+                                                : ... note: In instance 'top_uart_tb'
+  112 |   logic [31:0] r;
+      |                ^
+%Warning-UNUSEDPARAM: rtl/top_pkg.sv:32:18: Parameter is not used: 'TL_DUW'
+                                          : ... note: In instance 'top_uart_tb'
+   32 |   localparam int TL_DUW = 14;  
+      |                  ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:175:25: Parameter is not used: 'Secded2216ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  175 |   parameter logic [5:0] Secded2216ZeroEcc = 6'h0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:176:26: Parameter is not used: 'Secded2216ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  176 |   parameter logic [21:0] Secded2216ZeroWord = 22'h0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:184:25: Parameter is not used: 'Secded2822ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  184 |   parameter logic [5:0] Secded2822ZeroEcc = 6'h0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:185:26: Parameter is not used: 'Secded2822ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  185 |   parameter logic [27:0] Secded2822ZeroWord = 28'h0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:193:25: Parameter is not used: 'Secded3932ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  193 |   parameter logic [6:0] Secded3932ZeroEcc = 7'h0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:194:26: Parameter is not used: 'Secded3932ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  194 |   parameter logic [38:0] Secded3932ZeroWord = 39'h0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:202:25: Parameter is not used: 'Secded6457ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  202 |   parameter logic [6:0] Secded6457ZeroEcc = 7'h0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:203:26: Parameter is not used: 'Secded6457ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  203 |   parameter logic [63:0] Secded6457ZeroWord = 64'h0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:211:25: Parameter is not used: 'Secded7264ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  211 |   parameter logic [7:0] Secded7264ZeroEcc = 8'h0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:212:26: Parameter is not used: 'Secded7264ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  212 |   parameter logic [71:0] Secded7264ZeroWord = 72'h0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:220:25: Parameter is not used: 'SecdedHamming2216ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  220 |   parameter logic [5:0] SecdedHamming2216ZeroEcc = 6'h0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:221:26: Parameter is not used: 'SecdedHamming2216ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  221 |   parameter logic [21:0] SecdedHamming2216ZeroWord = 22'h0;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:229:25: Parameter is not used: 'SecdedHamming3932ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  229 |   parameter logic [6:0] SecdedHamming3932ZeroEcc = 7'h0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:230:26: Parameter is not used: 'SecdedHamming3932ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  230 |   parameter logic [38:0] SecdedHamming3932ZeroWord = 39'h0;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:238:25: Parameter is not used: 'SecdedHamming7264ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  238 |   parameter logic [7:0] SecdedHamming7264ZeroEcc = 8'h0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:239:26: Parameter is not used: 'SecdedHamming7264ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  239 |   parameter logic [71:0] SecdedHamming7264ZeroWord = 72'h0;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:247:25: Parameter is not used: 'SecdedHamming7668ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  247 |   parameter logic [7:0] SecdedHamming7668ZeroEcc = 8'h0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:248:26: Parameter is not used: 'SecdedHamming7668ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  248 |   parameter logic [75:0] SecdedHamming7668ZeroWord = 76'h0;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:256:25: Parameter is not used: 'SecdedInv2216ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  256 |   parameter logic [5:0] SecdedInv2216ZeroEcc = 6'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:257:26: Parameter is not used: 'SecdedInv2216ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  257 |   parameter logic [21:0] SecdedInv2216ZeroWord = 22'h2A0000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:265:25: Parameter is not used: 'SecdedInv2822ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  265 |   parameter logic [5:0] SecdedInv2822ZeroEcc = 6'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:266:26: Parameter is not used: 'SecdedInv2822ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  266 |   parameter logic [27:0] SecdedInv2822ZeroWord = 28'hA800000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:274:25: Parameter is not used: 'SecdedInv3932ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  274 |   parameter logic [6:0] SecdedInv3932ZeroEcc = 7'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:275:26: Parameter is not used: 'SecdedInv3932ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  275 |   parameter logic [38:0] SecdedInv3932ZeroWord = 39'h2A00000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:283:25: Parameter is not used: 'SecdedInv6457ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  283 |   parameter logic [6:0] SecdedInv6457ZeroEcc = 7'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:284:26: Parameter is not used: 'SecdedInv6457ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  284 |   parameter logic [63:0] SecdedInv6457ZeroWord = 64'h5400000000000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:292:25: Parameter is not used: 'SecdedInv7264ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  292 |   parameter logic [7:0] SecdedInv7264ZeroEcc = 8'hAA;
+      |                         ^~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:293:26: Parameter is not used: 'SecdedInv7264ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  293 |   parameter logic [71:0] SecdedInv7264ZeroWord = 72'hAA0000000000000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:301:25: Parameter is not used: 'SecdedInvHamming2216ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  301 |   parameter logic [5:0] SecdedInvHamming2216ZeroEcc = 6'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:302:26: Parameter is not used: 'SecdedInvHamming2216ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  302 |   parameter logic [21:0] SecdedInvHamming2216ZeroWord = 22'h2A0000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:310:25: Parameter is not used: 'SecdedInvHamming3932ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  310 |   parameter logic [6:0] SecdedInvHamming3932ZeroEcc = 7'h2A;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:311:26: Parameter is not used: 'SecdedInvHamming3932ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  311 |   parameter logic [38:0] SecdedInvHamming3932ZeroWord = 39'h2A00000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:319:25: Parameter is not used: 'SecdedInvHamming7264ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  319 |   parameter logic [7:0] SecdedInvHamming7264ZeroEcc = 8'hAA;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:320:26: Parameter is not used: 'SecdedInvHamming7264ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  320 |   parameter logic [71:0] SecdedInvHamming7264ZeroWord = 72'hAA0000000000000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:328:25: Parameter is not used: 'SecdedInvHamming7668ZeroEcc'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  328 |   parameter logic [7:0] SecdedInvHamming7668ZeroEcc = 8'hAA;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_secded_pkg.sv:329:26: Parameter is not used: 'SecdedInvHamming7668ZeroWord'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  329 |   parameter logic [75:0] SecdedInvHamming7668ZeroWord = 76'hAA00000000000000000;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:23:31: Parameter is not used: 'PRINCE_SBOX4'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   23 |   parameter logic [15:0][3:0] PRINCE_SBOX4 = {4'h4, 4'hD, 4'h5, 4'hE,
+      |                               ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:28:31: Parameter is not used: 'PRINCE_SBOX4_INV'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   28 |   parameter logic [15:0][3:0] PRINCE_SBOX4_INV = {4'h1, 4'hC, 4'hE, 4'h5,
+      |                               ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:33:31: Parameter is not used: 'PRINCE_SHIFT_ROWS64'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   33 |   parameter logic [15:0][3:0] PRINCE_SHIFT_ROWS64  = '{4'hF, 4'hA, 4'h5, 4'h0,
+      |                               ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:38:31: Parameter is not used: 'PRINCE_SHIFT_ROWS64_INV'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   38 |   parameter logic [15:0][3:0] PRINCE_SHIFT_ROWS64_INV = '{4'hF, 4'h2, 4'h5, 4'h8,
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:44:32: Parameter is not used: 'PRINCE_ROUND_CONST'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   44 |   parameter logic [11:0][63:0] PRINCE_ROUND_CONST = {64'hC0AC29B7C97C50DD,
+      |                                ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:58:26: Parameter is not used: 'PRINCE_ALPHA_CONST'
+                                                                                                                      : ... note: In instance 'top_uart_tb'
+   58 |   parameter logic [63:0] PRINCE_ALPHA_CONST = 64'hC0AC29B7C97C50DD;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:153:31: Parameter is not used: 'PRESENT_PERM32'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  153 |   parameter logic [31:0][4:0] PRESENT_PERM32 = {5'd31, 5'd23, 5'd15, 5'd07,
+      |                               ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:162:31: Parameter is not used: 'PRESENT_PERM32_INV'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  162 |   parameter logic [31:0][4:0] PRESENT_PERM32_INV = {5'd31, 5'd27, 5'd23, 5'd19,
+      |                               ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:172:31: Parameter is not used: 'PRESENT_PERM64'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  172 |   parameter logic [63:0][5:0] PRESENT_PERM64 = {6'd63, 6'd47, 6'd31, 6'd15,
+      |                               ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_cipher_pkg.sv:189:31: Parameter is not used: 'PRESENT_PERM64_INV'
+                                                                                                                       : ... note: In instance 'top_uart_tb'
+  189 |   parameter logic [63:0][5:0] PRESENT_PERM64_INV = {6'd63, 6'd59, 6'd55, 6'd51,
+      |                               ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/tlul_host.sv:12:29: Bits of signal are not used: 'tl_d2h'[64:48,15:1]
+                                             : ... note: In instance 'top_uart_tb.u_host'
+   12 |   input  tlul_pkg::tl_d2h_t tl_d2h
+      |                             ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv:7:15: Parameter is not used: 'AsconRoundCountW'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_host'
+    7 | parameter int AsconRoundCountW = 4;
+      |               ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv:36:25: Parameter is not used: 'IV_128'
+                                                                                                                     : ... note: In instance 'top_uart_tb.u_host'
+   36 | localparam logic [63:0] IV_128  = 64'h80400c0600000000;
+      |                         ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv:37:25: Parameter is not used: 'IV_128A'
+                                                                                                                     : ... note: In instance 'top_uart_tb.u_host'
+   37 | localparam logic [63:0] IV_128A = 64'h80800c0800000000;
+      |                         ^~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_ascon_pkg.sv:39:24: Parameter is not used: 'ROUND_MAX'
+                                                                                                                     : ... note: In instance 'top_uart_tb.u_host'
+   39 | localparam logic [3:0] ROUND_MAX = 4'b1011;
+      |                        ^~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_pkg.sv:17:22: Parameter is not used: 'ESC_TX_DEFAULT'
+                                                                                                                   : ... note: In instance 'top_uart_tb.u_host'
+   17 |   parameter esc_tx_t ESC_TX_DEFAULT = '{esc_p:  1'b0,
+      |                      ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_esc_pkg.sv:20:22: Parameter is not used: 'ESC_RX_DEFAULT'
+                                                                                                                   : ... note: In instance 'top_uart_tb.u_host'
+   20 |   parameter esc_rx_t ESC_RX_DEFAULT = '{resp_p: 1'b0,
+      |                      ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_pad_wrapper_pkg.sv:41:17: Parameter is not used: 'AttrDw'
+                                                                                                                           : ... note: In instance 'top_uart_tb.u_host'
+   41 |   parameter int AttrDw = $bits(pad_attr_t);
+      |                 ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:16:26: Parameter is not used: 'PartialSeedWidthDefault'
+                                                                                                                       : ... note: In instance 'top_uart_tb.u_host'
+   16 |   parameter int unsigned PartialSeedWidthDefault = 32;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:17:26: Parameter is not used: 'MinNfsrWidth'
+                                                                                                                       : ... note: In instance 'top_uart_tb.u_host'
+   17 |   parameter int unsigned MinNfsrWidth = 84;
+      |                          ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:23:33: Parameter is not used: 'RndCnstTriviumLfsrSeedDefault'
+                                                                                                                       : ... note: In instance 'top_uart_tb.u_host'
+   23 |   parameter trivium_lfsr_seed_t RndCnstTriviumLfsrSeedDefault = {
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:32:26: Parameter is not used: 'TriviumMaxNfsrWidth'
+                                                                                                                       : ... note: In instance 'top_uart_tb.u_host'
+   32 |   parameter int unsigned TriviumMaxNfsrWidth = 111;
+      |                          ^~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_trivium_pkg.sv:102:26: Parameter is not used: 'BiviumMaxNfsrWidth'
+                                                                                                                        : ... note: In instance 'top_uart_tb.u_host'
+  102 |   parameter int unsigned BiviumMaxNfsrWidth = 93;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_1p_pkg.sv:23:26: Parameter is not used: 'RAM_1P_CFG_DEFAULT'
+                                                                                                                              : ... note: In instance 'top_uart_tb.u_host'
+   23 |   parameter ram_1p_cfg_t RAM_1P_CFG_DEFAULT = '0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_ram_2p_pkg.sv:21:26: Parameter is not used: 'RAM_2P_CFG_DEFAULT'
+                                                                                                                              : ... note: In instance 'top_uart_tb.u_host'
+   21 |   parameter ram_2p_cfg_t RAM_2P_CFG_DEFAULT = '0;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim_generic/rtl/prim_rom_pkg.sv:14:23: Parameter is not used: 'ROM_CFG_DEFAULT'
+                                                                                                                           : ... note: In instance 'top_uart_tb.u_host'
+   14 |   parameter rom_cfg_t ROM_CFG_DEFAULT = '0;
+      |                       ^~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/top_racl_pkg.sv:76:39: Bits of signal are not used: 'shifted'[2:1]
+                                                : ... note: In instance 'top_uart_tb.u_host'
+   76 |       logic [tlul_pkg::RsvdWidth-1:0] shifted;
+      |                                       ^~~~~~~
+%Warning-UNUSEDSIGNAL: rtl/uart_core.sv:14:38: Bits of signal are not used: 'reg2hw'[68:57]
+                                             : ... note: In instance 'top_uart_tb.u_dut.uart_core'
+   14 |   input  uart_reg_pkg::uart_reg2hw_t reg2hw,
+      |                                      ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_pkg.sv:19:24: Parameter is not used: 'ALERT_TX_DEFAULT'
+                                                                                                                     : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender'
+   19 |   parameter alert_tx_t ALERT_TX_DEFAULT = '{alert_p:  1'b0,
+      |                        ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_alert_pkg.sv:22:24: Parameter is not used: 'ALERT_RX_DEFAULT'
+                                                                                                                     : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender'
+   22 |   parameter alert_rx_t ALERT_RX_DEFAULT = '{ping_p: 1'b0,
+      |                        ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:366:25: Parameter is not used: 'UART_INTR_TEST_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  366 |   parameter logic [8:0] UART_INTR_TEST_RESVAL = 9'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:367:25: Parameter is not used: 'UART_INTR_TEST_TX_WATERMARK_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  367 |   parameter logic [0:0] UART_INTR_TEST_TX_WATERMARK_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:368:25: Parameter is not used: 'UART_INTR_TEST_RX_WATERMARK_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  368 |   parameter logic [0:0] UART_INTR_TEST_RX_WATERMARK_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:369:25: Parameter is not used: 'UART_INTR_TEST_TX_DONE_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  369 |   parameter logic [0:0] UART_INTR_TEST_TX_DONE_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:370:25: Parameter is not used: 'UART_INTR_TEST_RX_OVERFLOW_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  370 |   parameter logic [0:0] UART_INTR_TEST_RX_OVERFLOW_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:371:25: Parameter is not used: 'UART_INTR_TEST_RX_FRAME_ERR_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  371 |   parameter logic [0:0] UART_INTR_TEST_RX_FRAME_ERR_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:372:25: Parameter is not used: 'UART_INTR_TEST_RX_BREAK_ERR_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  372 |   parameter logic [0:0] UART_INTR_TEST_RX_BREAK_ERR_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:373:25: Parameter is not used: 'UART_INTR_TEST_RX_TIMEOUT_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  373 |   parameter logic [0:0] UART_INTR_TEST_RX_TIMEOUT_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:374:25: Parameter is not used: 'UART_INTR_TEST_RX_PARITY_ERR_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  374 |   parameter logic [0:0] UART_INTR_TEST_RX_PARITY_ERR_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:375:25: Parameter is not used: 'UART_INTR_TEST_TX_EMPTY_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  375 |   parameter logic [0:0] UART_INTR_TEST_TX_EMPTY_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:376:25: Parameter is not used: 'UART_ALERT_TEST_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  376 |   parameter logic [0:0] UART_ALERT_TEST_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:377:25: Parameter is not used: 'UART_ALERT_TEST_FATAL_FAULT_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  377 |   parameter logic [0:0] UART_ALERT_TEST_FATAL_FAULT_RESVAL = 1'h 0;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:378:25: Parameter is not used: 'UART_STATUS_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  378 |   parameter logic [5:0] UART_STATUS_RESVAL = 6'h 3c;
+      |                         ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:379:25: Parameter is not used: 'UART_STATUS_TXEMPTY_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  379 |   parameter logic [0:0] UART_STATUS_TXEMPTY_RESVAL = 1'h 1;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:380:25: Parameter is not used: 'UART_STATUS_TXIDLE_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  380 |   parameter logic [0:0] UART_STATUS_TXIDLE_RESVAL = 1'h 1;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:381:25: Parameter is not used: 'UART_STATUS_RXIDLE_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  381 |   parameter logic [0:0] UART_STATUS_RXIDLE_RESVAL = 1'h 1;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:382:25: Parameter is not used: 'UART_STATUS_RXEMPTY_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  382 |   parameter logic [0:0] UART_STATUS_RXEMPTY_RESVAL = 1'h 1;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:383:25: Parameter is not used: 'UART_RDATA_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  383 |   parameter logic [7:0] UART_RDATA_RESVAL = 8'h 0;
+      |                         ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:384:26: Parameter is not used: 'UART_FIFO_STATUS_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  384 |   parameter logic [23:0] UART_FIFO_STATUS_RESVAL = 24'h 0;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/uart_reg_pkg.sv:385:26: Parameter is not used: 'UART_VAL_RESVAL'
+                                                : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_buf_in_req'
+  385 |   parameter logic [15:0] UART_VAL_RESVAL = 16'h 0;
+      |                          ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:53:27: Parameter is not used: 'InitHash_256'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_flop_alert'
+   53 |   localparam sha_word32_t InitHash_256 [8]= '{
+      |                           ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:58:27: Parameter is not used: 'InitHash_384'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_flop_alert'
+   58 |   localparam sha_word64_t InitHash_384 [8]= '{
+      |                           ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:64:27: Parameter is not used: 'InitHash_512'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_flop_alert'
+   64 |   localparam sha_word64_t InitHash_512 [8]= '{
+      |                           ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:71:27: Parameter is not used: 'CubicRootPrime256'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_flop_alert'
+   71 |   localparam sha_word32_t CubicRootPrime256 [NumRound256] = '{
+      |                           ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_sha2_pkg.sv:91:27: Parameter is not used: 'CubicRootPrime512'
+                                                                                                                    : ... note: In instance 'top_uart_tb.u_dut.gen_alert_tx[0].u_prim_alert_sender.u_prim_flop_alert'
+   91 |   localparam sha_word64_t CubicRootPrime512 [NumRound512] = '{
+      |                           ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:9:9: Signal is not used: 'clk_i'
+                                                                                                              : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_reg_if.u_err'
+    9 |   input clk_i,
+      |         ^~~~~
+%Warning-UNUSEDSIGNAL: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:10:9: Signal is not used: 'rst_ni'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_reg_if.u_err'
+   10 |   input rst_ni,
+      |         ^~~~~~
+%Warning-UNUSEDSIGNAL: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:12:18: Bits of signal are not used: 'tl_i'[102:100,97:90,53:22,0]
+                                                                                                                : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_reg_if.u_err'
+   12 |   input tl_h2d_t tl_i,
+      |                  ^~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:17:18: Parameter is not used: 'IW'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_reg_if.u_err'
+   17 |   localparam int IW  = $bits(tl_i.a_source);
+      |                  ^~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_err.sv:18:18: Parameter is not used: 'SZW'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_reg_if.u_err'
+   18 |   localparam int SZW = $bits(tl_i.a_size);
+      |                  ^~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_check.sv:34:17: Parameter is not used: 'EnableAlertTriggerSVA'
+                                                                                                                        : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check'
+   34 |   parameter bit EnableAlertTriggerSVA = 1
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_check.sv:37:34: Signal is not used: 'clk_i'
+                                                                                                                         : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check'
+   37 |   input                          clk_i,
+      |                                  ^~~~~
+%Warning-UNUSEDSIGNAL: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/prim/rtl/prim_onehot_check.sv:38:34: Signal is not used: 'rst_ni'
+                                                                                                                         : ... note: In instance 'top_uart_tb.u_dut.u_reg.u_prim_reg_we_check.u_prim_onehot_check'
+   38 |   input                          rst_ni,
+      |                                  ^~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:14:13: Parameter is not used: 'ArbiterImpl'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   14 |   parameter ArbiterImpl = "PPC";
+      |             ^~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:29:17: Parameter is not used: 'H2DCmdFullWidth'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   29 |   parameter int H2DCmdFullWidth = H2DCmdMaxWidth + H2DCmdIntgWidth;
+      |                 ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:32:17: Parameter is not used: 'D2HRspFullWidth'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   32 |   parameter int D2HRspFullWidth = D2HRspMaxWidth + D2HRspIntgWidth;
+      |                 ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:35:17: Parameter is not used: 'DataFullWidth'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   35 |   parameter int DataFullWidth   = DataMaxWidth + DataIntgWidth;
+      |                 ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:41:40: Parameter is not used: 'DataWhenInstrError'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   41 |   parameter logic [top_pkg::TL_DW-1:0] DataWhenInstrError = '0;
+      |                                        ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:44:40: Parameter is not used: 'DataWhenError'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   44 |   parameter logic [top_pkg::TL_DW-1:0] DataWhenError      = {top_pkg::TL_DW{1'b1}};
+      |                                        ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:89:23: Parameter is not used: 'TL_H2D_DEFAULT'
+                                                                                                               : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+   89 |   localparam tl_h2d_t TL_H2D_DEFAULT = '{
+      |                       ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: /home/magister/PERSEUS/verilator_uart/external/opentitan/hw/ip/tlul/rtl/tlul_pkg.sv:133:23: Parameter is not used: 'TL_D2H_DEFAULT'
+                                                                                                                : ... note: In instance 'top_uart_tb.u_dut.uart_core.u_uart_rxfifo..gen_normal_fifo.u_fifo_cnt'
+  133 |   localparam tl_d2h_t TL_D2H_DEFAULT = '{
+      |                       ^~~~~~~~~~~~~~
+%Error: Exiting due to 523 warning(s)
+make: *** [Makefile:108: build] Error 1
