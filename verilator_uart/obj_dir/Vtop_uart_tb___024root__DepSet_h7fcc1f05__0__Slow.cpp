@@ -16,25 +16,20 @@ VL_ATTR_COLD void Vtop_uart_tb___024root___eval_triggers__stl(Vtop_uart_tb___024
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop_uart_tb___024root___eval_triggers__stl\n"); );
     // Body
     vlSelf->__VstlTriggered.set(0U, (IData)(vlSelf->__VstlFirstIteration));
-    vlSelf->__VstlTriggered.set(1U, ((IData)(vlSelf->top_uart_tb__DOT__cio_tx_o) 
-                                     != (IData)(vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__cio_tx_o__0)));
-    vlSelf->__VstlTriggered.set(2U, ((vlSelf->top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree 
-                                      != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0) 
-                                     | (vlSelf->top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree 
-                                        != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree__0)));
-    vlSelf->__VstlTriggered.set(3U, (vlSelf->top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree 
-                                     != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0));
-    vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__cio_tx_o__0 
-        = vlSelf->top_uart_tb__DOT__cio_tx_o;
-    vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0 
-        = vlSelf->top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree;
-    vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree__0 
-        = vlSelf->top_uart_tb__DOT__u_dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree;
+    vlSelf->__VstlTriggered.set(1U, ((vlSelf->top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree 
+                                      != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0) 
+                                     | (vlSelf->top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree 
+                                        != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree__0)));
+    vlSelf->__VstlTriggered.set(2U, (vlSelf->top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree 
+                                     != vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0));
+    vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree__0 
+        = vlSelf->top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__or_tree;
+    vlSelf->__Vtrigprevexpr___TOP__top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree__0 
+        = vlSelf->top_uart_tb__DOT__dut__DOT__u_reg__DOT__u_prim_reg_we_check__DOT__u_prim_onehot_check__DOT__err_tree;
     if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->__VstlDidInit))))) {
         vlSelf->__VstlDidInit = 1U;
         vlSelf->__VstlTriggered.set(1U, 1U);
         vlSelf->__VstlTriggered.set(2U, 1U);
-        vlSelf->__VstlTriggered.set(3U, 1U);
     }
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {

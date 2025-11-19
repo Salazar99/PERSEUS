@@ -9,7 +9,6 @@ Vtop_uart_tb__ALL.o: Vtop_uart_tb__ALL.cpp Vtop_uart_tb.cpp \
  /usr/share/verilator/include/verilated_sym_props.h \
  /usr/share/verilator/include/vltstd/svdpi.h Vtop_uart_tb__Syms.h \
  Vtop_uart_tb.h Vtop_uart_tb___024root.h \
- /usr/share/verilator/include/verilated_timing.h \
  /usr/share/verilator/include/verilated_vcd_c.h \
  /usr/share/verilator/include/verilated_trace.h \
  Vtop_uart_tb___024root__DepSet_h7fcc1f05__0.cpp \

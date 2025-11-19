@@ -10,7 +10,6 @@ void Vtop_uart_tb___024root___ctor_var_reset(Vtop_uart_tb___024root* vlSelf);
 
 Vtop_uart_tb___024root::Vtop_uart_tb___024root(Vtop_uart_tb__Syms* symsp, const char* v__name)
     : VerilatedModule{v__name}
-    , __VdlySched{*symsp->_vm_contextp__}
     , vlSymsp{symsp}
  {
     // Reset structure values

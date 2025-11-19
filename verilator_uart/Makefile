@@ -94,11 +94,11 @@ VERILATOR_FLAGS +=  -Wpedantic
 VERILATOR_FLAGS += --Werror-PKGNODECL --Werror-ENUMVALUE --Werror-SELRANGE
 
 # Soften common bring-up noise
-VERILATOR_FLAGS += -Wno-UNOPTFLAT -Wno-INITIALDLY -Wno-WIDTHEXPAND
+VERILATOR_FLAGS += -Wno-UNOPTFLAT -Wno-INITIALDLY -Wno-WIDTHEXPAND -Wno-UNSIGNED -Wno-MULTIDRIVEN
 # Consider this if many truncations are intentional in TB:
 # VERILATOR_FLAGS += -Wno-WIDTHTRUNC
 
-VERILATOR_FLAGS += -sv --trace --trace-depth 1 --timing --trace-structs --trace-max-array 0
+VERILATOR_FLAGS += -sv --trace --trace-depth 1 --timing --trace-structs 
 
 # Enforce a single timescale across files (kills TIMESCALEMOD)
 VERILATOR_FLAGS += --timescale-override 1ns/1ps

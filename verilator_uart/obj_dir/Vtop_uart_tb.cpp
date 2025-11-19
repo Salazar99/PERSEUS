@@ -10,6 +10,26 @@
 Vtop_uart_tb::Vtop_uart_tb(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop_uart_tb__Syms(contextp(), _vcname__, this)}
+    , clk{vlSymsp->TOP.clk}
+    , rst_n{vlSymsp->TOP.rst_n}
+    , tl_i_a_valid{vlSymsp->TOP.tl_i_a_valid}
+    , tl_i_a_opcode{vlSymsp->TOP.tl_i_a_opcode}
+    , tl_i_a_size{vlSymsp->TOP.tl_i_a_size}
+    , tl_i_a_mask{vlSymsp->TOP.tl_i_a_mask}
+    , tl_i_a_source{vlSymsp->TOP.tl_i_a_source}
+    , tl_i_a_param{vlSymsp->TOP.tl_i_a_param}
+    , tl_i_d_ready{vlSymsp->TOP.tl_i_d_ready}
+    , tl_o_a_ready{vlSymsp->TOP.tl_o_a_ready}
+    , tl_o_d_valid{vlSymsp->TOP.tl_o_d_valid}
+    , tl_o_d_opcode{vlSymsp->TOP.tl_o_d_opcode}
+    , tl_o_d_source{vlSymsp->TOP.tl_o_d_source}
+    , tl_o_d_error{vlSymsp->TOP.tl_o_d_error}
+    , cio_tx_o{vlSymsp->TOP.cio_tx_o}
+    , cio_tx_en_o{vlSymsp->TOP.cio_tx_en_o}
+    , cio_rx_i{vlSymsp->TOP.cio_rx_i}
+    , tl_i_a_address{vlSymsp->TOP.tl_i_a_address}
+    , tl_i_a_data{vlSymsp->TOP.tl_i_a_data}
+    , tl_o_d_data{vlSymsp->TOP.tl_o_d_data}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context
@@ -62,9 +82,12 @@ void Vtop_uart_tb::eval_step() {
 
 //============================================================
 // Events and timing
-bool Vtop_uart_tb::eventsPending() { return !vlSymsp->TOP.__VdlySched.empty(); }
+bool Vtop_uart_tb::eventsPending() { return false; }
 
-uint64_t Vtop_uart_tb::nextTimeSlot() { return vlSymsp->TOP.__VdlySched.nextTimeSlot(); }
+uint64_t Vtop_uart_tb::nextTimeSlot() {
+    VL_FATAL_MT(__FILE__, __LINE__, "", "%Error: No delays in the design");
+    return 0;
+}
 
 //============================================================
 // Utilities
