@@ -101,14 +101,14 @@ module top_uart_tb (
   // ---------------------------
   // RACL tie-off (unpacked array)
   // ---------------------------
-  top_racl_pkg::racl_policy_vec_t racl_policies_i;
-  generate
-    for (genvar i = 0; i < top_racl_pkg::RACL_NUM_POLICIES; i++) begin : g_racl_tieoff
-      assign racl_policies_i[i] = '0; // expand fields explicitly if needed
-    end
-  endgenerate
+  // top_racl_pkg::racl_policy_vec_t racl_policies_i;
+  // generate
+  //   for (genvar i = 0; i < top_racl_pkg::RACL_NUM_POLICIES; i++) begin : g_racl_tieoff
+  //     assign racl_policies_i[i] = '0; // expand fields explicitly if needed
+  //   end
+  // endgenerate
 
-  top_racl_pkg::racl_error_log_t  racl_error_o;
+  // top_racl_pkg::racl_error_log_t  racl_error_o;
 
   // Interrupts (observe in waveform if desired)
   logic intr_tx_watermark_o;
@@ -127,25 +127,20 @@ module top_uart_tb (
   // ---------------------------
   // DUT instantiation (your UART)
   // ---------------------------
-  uart #(
-    .AlertAsyncOn('{NumAlerts{1'b1}}),
-    .AlertSkewCycles(1),
-    .EnableRacl(1'b0),
-    .RaclErrorRsp(1'b0),
-    .RaclPolicySelVec('{NumRegs{0}})
-  ) dut (
+  uart dut (
     .clk_i      (clk),
     .rst_ni     (rst_ni),
     .tl_i       (tl_i),
     .tl_o       (tl_o),
     .alert_rx_i (alert_rx_i),
     .alert_tx_o (alert_tx_o),
-    .racl_policies_i (racl_policies_i),
-    .racl_error_o    (racl_error_o),
+    // .racl_policies_i      (),
+     .racl_error_o         (),
     .lsio_trigger_o  (),
     .cio_rx_i   (cio_rx_i),
     .cio_tx_o   (cio_tx_o),
     .cio_tx_en_o(cio_tx_en_o),
+
     .intr_tx_watermark_o(intr_tx_watermark_o),
     .intr_tx_empty_o    (intr_tx_empty_o),
     .intr_rx_watermark_o(intr_rx_watermark_o),

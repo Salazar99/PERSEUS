@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Dec  3 12:28:08 2025
+[*]
+[dumpfile] "/home/magister/PERSEUS/verilator_uart/dump.vcd"
+[dumpfile_mtime] "Wed Dec  3 12:13:34 2025"
+[dumpfile_size] 1660006
+[savefile] "/home/magister/PERSEUS/verilator_uart/dump.vcd.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -2 -1
+*-16.638987 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.top_uart_tb.
+[treeopen] TOP.top_uart_tb.dut.
+[treeopen] TOP.top_uart_tb.dut.uart_core.
+[sst_width] 214
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 151
+@29
+TOP.cio_rx_i
+TOP.top_uart_tb.cio_rx_i
+TOP.top_uart_tb.dut.cio_rx_i
+TOP.top_uart_tb.dut.uart_core.rx
+TOP.top_uart_tb.dut.uart_core.rx_tick_baud
+TOP.top_uart_tb.dut.uart_core.rx_uart_idle
+TOP.top_uart_tb.dut.uart_core.rx_valid
+TOP.top_uart_tb.dut.uart_core.uart_rx.rx
+TOP.top_uart_tb.dut.uart_core.uart_rx.idle_q
+TOP.top_uart_tb.dut.uart_core.uart_rx.tick_baud_q
+@23
+TOP.top_uart_tb.dut.uart_core.uart_rx.bit_cnt_q[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

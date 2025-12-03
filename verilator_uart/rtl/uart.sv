@@ -27,7 +27,8 @@ module uart
   output prim_alert_pkg::alert_tx_t [NumAlerts-1:0] alert_tx_o,
 
   // RACL interface
-  input  top_racl_pkg::racl_policy_vec_t racl_policies_i,
+  
+  //input  top_racl_pkg::racl_policy_vec_t racl_policies_i ,
   output top_racl_pkg::racl_error_log_t  racl_error_o,
 
   output logic    lsio_trigger_o,
@@ -64,8 +65,8 @@ module uart
     .tl_o,
     .reg2hw,
     .hw2reg,
-    .racl_policies_i,
-    .racl_error_o,
+    // .racl_policies_i,
+     .racl_error_o,
     // SEC_CM: BUS.INTEGRITY
     .intg_err_o (alerts[0])
   );

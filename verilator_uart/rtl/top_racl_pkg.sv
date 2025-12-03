@@ -27,8 +27,8 @@ package top_racl_pkg;
     racl_perm_t write_perm;
   } racl_policy_t;
 
-  typedef racl_policy_t racl_policy_vec   [RACL_NUM_POLICIES];
-  typedef racl_policy_t racl_policy_vec_t [RACL_NUM_POLICIES];
+  typedef racl_policy_t racl_policy_vec   [1];
+  typedef racl_policy_t racl_policy_vec_t [1];
 
   localparam int RACL_POLICY_SEL_W =
       (RACL_NUM_POLICIES <= 1) ? 1 : $clog2(RACL_NUM_POLICIES);

@@ -25,7 +25,6 @@ PKG_ALL  := $(sort $(foreach D,$(PKG_DIRS),$(wildcard $(D)/*_pkg.sv)))
 
 # PRIM core packages first, then TLUL package
 PRIM_CORE_PKGS := \
-	$(PRIM_DIR)/prim_pkg.sv \
 	$(PRIM_DIR)/prim_util_pkg.sv \
 	$(PRIM_DIR)/prim_mubi_pkg.sv \
 	$(PRIM_DIR)/prim_subreg_pkg.sv \
@@ -98,7 +97,7 @@ VERILATOR_FLAGS += -Wno-UNOPTFLAT -Wno-INITIALDLY -Wno-WIDTHEXPAND -Wno-UNSIGNED
 # Consider this if many truncations are intentional in TB:
 # VERILATOR_FLAGS += -Wno-WIDTHTRUNC
 
-VERILATOR_FLAGS += -sv --trace --trace-depth 1 --timing --trace-structs 
+VERILATOR_FLAGS += -sv --trace --timing 
 
 # Enforce a single timescale across files (kills TIMESCALEMOD)
 VERILATOR_FLAGS += --timescale-override 1ns/1ps

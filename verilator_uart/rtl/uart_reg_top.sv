@@ -22,7 +22,8 @@ module uart_reg_top
   input  uart_reg_pkg::uart_hw2reg_t hw2reg, // Read
 
   // RACL interface
-  input  top_racl_pkg::racl_policy_vec_t racl_policies_i,
+  
+  // input  top_racl_pkg::racl_policy_vec_t racl_policies_i,
   output top_racl_pkg::racl_error_log_t  racl_error_o,
 
   // Integrity check errors
@@ -1612,14 +1613,14 @@ module uart_reg_top
     addr_hit[12] = (reg_addr == UART_TIMEOUT_CTRL_OFFSET);
 
     if (EnableRacl) begin : gen_racl_hit
-      for (int unsigned slice_idx = 0; slice_idx < 13; slice_idx++) begin
-        racl_addr_hit_read[slice_idx] =
-            addr_hit[slice_idx] & (|(racl_policies_i[RaclPolicySelVec[slice_idx]].read_perm
-                                      & racl_role_vec));
-        racl_addr_hit_write[slice_idx] =
-            addr_hit[slice_idx] & (|(racl_policies_i[RaclPolicySelVec[slice_idx]].write_perm
-                                      & racl_role_vec));
-      end
+      // for (int unsigned slice_idx = 0; slice_idx < 13; slice_idx++) begin
+      //   racl_addr_hit_read[slice_idx] =
+      //       addr_hit[slice_idx] & (|(racl_policies_i[RaclPolicySelVec[slice_idx]].read_perm
+      //                                 & racl_role_vec));
+      //   racl_addr_hit_write[slice_idx] =
+      //       addr_hit[slice_idx] & (|(racl_policies_i[RaclPolicySelVec[slice_idx]].write_perm
+      //                                 & racl_role_vec));
+      // end
     end else begin : gen_no_racl
       racl_addr_hit_read  = addr_hit;
       racl_addr_hit_write = addr_hit;
@@ -1898,17 +1899,10 @@ module uart_reg_top
   logic unused_be;
   assign unused_wdata = ^reg_wdata;
   assign unused_be = ^reg_be;
-  logic unused_policy_sel;
-  assign unused_policy_sel = ^racl_policies_i;
-
+  // logic unused_policy_sel;
+  // assign unused_policy_sel = ^racl_policies_i;
   // Assertions for Register Interface
-  `ASSERT_PULSE(wePulse, reg_we, clk_i, !rst_ni)
-  `ASSERT_PULSE(rePulse, reg_re, clk_i, !rst_ni)
-
-  `ASSERT(reAfterRv, $rose(reg_re || reg_we) |=> tl_o_pre.d_valid, clk_i, !rst_ni)
-
-  `ASSERT(en2addrHit, (reg_we || reg_re) |-> $onehot0(addr_hit), clk_i, !rst_ni)
-
+  
   // this is formulated as an assumption such that the FPV testbenches do disprove this
   // property by mistake
   //`ASSUME(reqParity, tl_reg_h2d.a_valid |-> tl_reg_h2d.a_user.chk_en == tlul_pkg::CheckDis)

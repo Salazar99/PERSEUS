@@ -1,5 +1,6 @@
 #include <cstdint>
 #include <cstdio>
+#include <iostream>
 #include "Vtop_uart_tb.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
@@ -48,6 +49,12 @@ static bool wait_d_valid(Vtop_uart_tb* top, VerilatedVcdC* tfp, int max = 2000) 
     fprintf(stderr, "Timeout: tl_o_d_valid never asserted\n");
     return false;
 }
+
+void print_binary32(uint32_t x) { 
+    for (int i = 31; i >= 0; --i) 
+        std::cout << ((x >> i) & 1); 
+    std::cout << '\n'; 
+} 
 
 // -----------------------
 // TL‑UL write/read (32b)
@@ -153,6 +160,7 @@ static bool uart_init(Vtop_uart_tb* top, VerilatedVcdC* tfp, uint32_t baud, uint
 
 // Drive RX bit for 'ticks' full cycles
 static void drive_rx_bit(Vtop_uart_tb* top, VerilatedVcdC* tfp, uint8_t bit_val, int ticks) {
+    std::cout << "Driving RX bit: " << int(bit_val) << " for " << ticks << " ticks\n";    
     top->cio_rx_i = bit_val ? 1 : 0;
     for (int i = 0; i < ticks; ++i) {
         step_full_cycle(top, tfp);
@@ -202,7 +210,8 @@ int main(int argc, char** argv) {
         fprintf(stderr, "uart_init failed (integrity/handshake error)\n");
         tfp->close(); top->final(); delete tfp; delete top; return 1;
     }
-
+    std::cout << "UART initialized for " << BAUD << " baud\n";
+    top->cio_rx_i = 1; // idle
     // Quick TX test: write 'A' to WDATA
     if (!tl_write32(top, tfp, UART_WDATA, 0x41)) {
         fprintf(stderr, "WDATA write failed\n");
@@ -216,6 +225,7 @@ int main(int argc, char** argv) {
     }
 
     // RX test: drive external 8N1 frame for 0x55
+    std::cout << "Testing RX" << std::endl;
     top->cio_rx_i = 1; // idle
     for (int i = 0; i < 20; ++i) step_full_cycle(top, tfp);
 
@@ -240,7 +250,10 @@ int main(int argc, char** argv) {
         fprintf(stderr, "RDATA read failed\n");
         tfp->close(); top->final(); delete tfp; delete top; return 1;
     }
-    std::printf("RX got: 0x%02x\n", rdata & 0xFF);
+    std::cout << "RX got:" << std::hex << rdata;
+    std::cout << "bin:";
+    print_binary32(rdata);
+    std::cout << std::dec << std::endl;
 
     // Read STATUS (optional)
     uint32_t status = 0;

@@ -15,6 +15,8 @@
 
 // INCLUDE MODULE CLASSES
 #include "Vtop_uart_tb___024root.h"
+#include "Vtop_uart_tb_uart_reg_pkg.h"
+#include "Vtop_uart_tb_prim_sha2_pkg.h"
 
 // DPI TYPES for DPI Export callbacks (Internal use)
 
@@ -30,6 +32,8 @@ class alignas(VL_CACHE_LINE_BYTES)Vtop_uart_tb__Syms final : public VerilatedSym
 
     // MODULE INSTANCE STATE
     Vtop_uart_tb___024root         TOP;
+    Vtop_uart_tb_prim_sha2_pkg     TOP__prim_sha2_pkg;
+    Vtop_uart_tb_uart_reg_pkg      TOP__uart_reg_pkg;
 
     // CONSTRUCTORS
     Vtop_uart_tb__Syms(VerilatedContext* contextp, const char* namep, Vtop_uart_tb* modelp);

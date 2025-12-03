@@ -33,6 +33,10 @@ VM_CLASSES_SLOW += \
 	Vtop_uart_tb___024root__Slow \
 	Vtop_uart_tb___024root__DepSet_h7fcc1f05__0__Slow \
 	Vtop_uart_tb___024root__DepSet_ha0ff4930__0__Slow \
+	Vtop_uart_tb_uart_reg_pkg__Slow \
+	Vtop_uart_tb_uart_reg_pkg__DepSet_h919b1338__0__Slow \
+	Vtop_uart_tb_prim_sha2_pkg__Slow \
+	Vtop_uart_tb_prim_sha2_pkg__DepSet_h34dea809__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \

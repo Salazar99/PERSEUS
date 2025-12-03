@@ -14,6 +14,9 @@
 class Vtop_uart_tb__Syms;
 class Vtop_uart_tb___024root;
 class VerilatedVcdC;
+class Vtop_uart_tb_prim_sha2_pkg;
+class Vtop_uart_tb_uart_reg_pkg;
+
 
 // This class is the main interface to the Verilated model
 class alignas(VL_CACHE_LINE_BYTES) Vtop_uart_tb VL_NOT_FINAL : public VerilatedModel {
@@ -22,6 +25,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_uart_tb VL_NOT_FINAL : public VerilatedM
     Vtop_uart_tb__Syms* const vlSymsp;
 
   public:
+
+    // CONSTEXPR CAPABILITIES
+    // Verilated with --trace?
+    static constexpr bool traceCapable = true;
 
     // PORTS
     // The application code writes and reads these signals to
@@ -50,6 +57,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_uart_tb VL_NOT_FINAL : public VerilatedM
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
+    Vtop_uart_tb_uart_reg_pkg* const __PVT__uart_reg_pkg;
+    Vtop_uart_tb_prim_sha2_pkg* const __PVT__prim_sha2_pkg;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.
@@ -83,7 +92,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_uart_tb VL_NOT_FINAL : public VerilatedM
     /// Returns time at next time slot. Aborts if !eventsPending()
     uint64_t nextTimeSlot();
     /// Trace signals in the model; called by application code
-    void trace(VerilatedVcdC* tfp, int levels, int options = 0);
+    void trace(VerilatedTraceBaseC* tfp, int levels, int options = 0) { contextp()->trace(tfp, levels, options); }
     /// Retrieve name of this model instance (as passed to constructor).
     const char* name() const;
 
@@ -98,6 +107,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop_uart_tb VL_NOT_FINAL : public VerilatedM
     /// Re-allocate necessary resources. Called after cloning.
     void atClone() const;
     std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
+  private:
+    // Internal functions - trace registration
+    void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);
 };
 
 #endif  // guard
