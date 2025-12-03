@@ -1,4 +1,4 @@
-sim_main.o: ../sim/sim_main.cpp Vtop_uart_tb.h \
+sim_main_TX.o: ../sim/sim_main_TX.cpp Vtop_uart_tb.h \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilatedos.h \
  /usr/local/share/verilator/include/verilated_config.h \

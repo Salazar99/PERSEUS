@@ -82,7 +82,8 @@ TB_LIST = \
 	rtl/top_uart_tb.sv \
 	rtl/tlul_host.sv
 
-CPP = sim/sim_main.cpp
+CPP_RX = sim/sim_main_RX.cpp
+CPP_TX = sim/sim_main_TX.cpp
 
 # ===== Verilator flags =====
 
@@ -104,7 +105,7 @@ VERILATOR_FLAGS += --timescale-override 1ns/1ps
 
 
 # ===== Targets =====
-all: build run
+all: build_rx run
 
 prepare:
 	@mkdir -p external || true
@@ -115,7 +116,7 @@ prepare:
 	fi
 
 # ORDER: stubs -> ALL packages (priority first) -> PRIM/TLUL others -> UART -> TB/CPP
-build: prepare
+build_tx: prepare
 	@echo "==> Packages (priority first):"
 	@echo "  PRIM_CORE_PKGS = $(PRIM_CORE_PKGS)"
 	@echo "  TLUL_PKG       = $(TLUL_PKG)"
@@ -126,9 +127,25 @@ build: prepare
 	rtl/top_racl_pkg.sv \
 	$(SV_OTHERS) \
 	$(RTL_UART) \
-	$(TB_LIST) $(CPP) \
+	$(TB_LIST) $(CPP_TX) \
 	--top-module top_uart_tb \
 	-o Vtop_uart_tb
+
+build_rx: prepare
+	@echo "==> Packages (priority first):"
+	@echo "  PRIM_CORE_PKGS = $(PRIM_CORE_PKGS)"
+	@echo "  TLUL_PKG       = $(TLUL_PKG)"
+	verilator $(VERILATOR_FLAGS) --cc --exe --build \
+	-I$(PRIM_DIR) -I$(TLUL_DIR) -I$(PRIM_GENERIC_DIR) \
+	$(STUBS) \
+	$(PKG_ORDERED) \
+	rtl/top_racl_pkg.sv \
+	$(SV_OTHERS) \
+	$(RTL_UART) \
+	$(TB_LIST) $(CPP_RX) \
+	--top-module top_uart_tb \
+	-o Vtop_uart_tb
+
 
 run:
 	./obj_dir/Vtop_uart_tb

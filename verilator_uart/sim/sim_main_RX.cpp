@@ -175,7 +175,7 @@ int main(int argc, char** argv) {
     auto* top = new Vtop_uart_tb;
     auto* tfp = new VerilatedVcdC;
     top->trace(tfp, 99);
-    tfp->open("dump.vcd");
+    tfp->open("dump_rx.vcd");
 
     // Init
     top->clk   = 0;
@@ -211,18 +211,9 @@ int main(int argc, char** argv) {
         tfp->close(); top->final(); delete tfp; delete top; return 1;
     }
     std::cout << "UART initialized for " << BAUD << " baud\n";
+    //Set rx to idle
     top->cio_rx_i = 1; // idle
-    // Quick TX test: write 'A' to WDATA
-    if (!tl_write32(top, tfp, UART_WDATA, 0x41)) {
-        fprintf(stderr, "WDATA write failed\n");
-        tfp->close(); top->final(); delete tfp; delete top; return 1;
-    }
-
-    // Run to serialize TX
-    for (int i = 0; i < 2000; ++i) {
-        step_full_cycle(top, tfp);
-        if (Verilated::gotFinish()) break;
-    }
+    step_full_cycle(top, tfp);
 
     // RX test: drive external 8N1 frame for 0x55
     std::cout << "Testing RX" << std::endl;
