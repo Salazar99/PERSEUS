@@ -1,1 +1,5 @@
-opentitan/
+external/
+# Ignore build artifacts
+/obj_dir/
+.vscode/
+*.vcd
