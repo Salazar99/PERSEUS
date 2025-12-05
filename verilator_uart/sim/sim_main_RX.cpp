@@ -215,45 +215,61 @@ int main(int argc, char** argv) {
     top->cio_rx_i = 1; // idle
     step_full_cycle(top, tfp);
 
-    // RX test: drive external 8N1 frame for 0x55
-    std::cout << "Testing RX" << std::endl;
-    top->cio_rx_i = 1; // idle
-    for (int i = 0; i < 20; ++i) step_full_cycle(top, tfp);
+    // Run count RX tests
+    const size_t count = 5;
+    for (size_t i = 0; i < count; i++)
+    {
+        // RX test: drive external 8N1 frame for 0x55
+        std::cout << "Testing RX" << std::endl;
+        top->cio_rx_i = 1; // idle
+        for (int i = 0; i < 20; ++i) step_full_cycle(top, tfp);
 
-    // Start bit (0)
-    drive_rx_bit(top, tfp, 0, BAUD_TICKS);
+        // Start bit (0)
+        drive_rx_bit(top, tfp, 0, BAUD_TICKS);
 
-    // Data bits LSB-first: 0x55 = 0b0101_0101
-    uint8_t rx_byte = 0x55;
-    for (int b = 0; b < 8; ++b) {
-        drive_rx_bit(top, tfp, (rx_byte >> b) & 1, BAUD_TICKS);
-    }
+        // Data bits LSB-first: 0x55 = 0b0101_0101
 
-    // Stop bit (1)
-    drive_rx_bit(top, tfp, 1, BAUD_TICKS);
+        // Randomize RX byte using rand()/time (seeds with wall-clock + sim_time)
+        std::srand(static_cast<unsigned>(std::time(nullptr)) ^ static_cast<unsigned>(sim_time));
+        uint8_t rx_byte = static_cast<uint8_t>(std::rand() & 0xFF);
+        std::cout << "Random RX byte: 0x" << std::hex << int(rx_byte) << std::dec << '\n';
 
-    // Allow RX path to push to RDATA
-    for (int i = 0; i < 100; ++i) step_full_cycle(top, tfp);
+        for (int b = 0; b < 8; ++b) {
+            drive_rx_bit(top, tfp, (rx_byte >> b) & 1, BAUD_TICKS);
+        }
 
-    // Read received data
-    uint32_t rdata = 0;
-    if (!tl_read32(top, tfp, UART_RDATA, rdata)) {
-        fprintf(stderr, "RDATA read failed\n");
-        tfp->close(); top->final(); delete tfp; delete top; return 1;
-    }
-    std::cout << "RX got:" << std::hex << rdata;
-    std::cout << "bin:";
-    print_binary32(rdata);
-    std::cout << std::dec << std::endl;
+        // Stop bit (1)
+        drive_rx_bit(top, tfp, 1, BAUD_TICKS);
 
-    // Read STATUS (optional)
-    uint32_t status = 0;
-    if (tl_read32(top, tfp, UART_STATUS, status)) {
-        std::printf("STATUS: 0x%08x\n", status);
+        // Allow RX path to push to RDATA
+        for (int i = 0; i < 100; ++i) step_full_cycle(top, tfp);
+
+        // Read received data
+        uint32_t rdata = 0;
+        if (!tl_read32(top, tfp, UART_RDATA, rdata)) {
+            fprintf(stderr, "RDATA read failed\n");
+            tfp->close(); top->final(); delete tfp; delete top; return 1;
+        }
+        std::cout << "RX got:" << std::hex << rdata << std::endl;
+        std::cout << "bin:";
+        print_binary32(rdata);
+        std::cout << std::dec << std::endl;
+
+        // Read STATUS (optional)
+        uint32_t status = 0;
+        if (tl_read32(top, tfp, UART_STATUS, status)) {
+            std::printf("STATUS: 0x%08x\n", status);
+        }
+
+        //Just a delay in between transmissions
+        for (int i = 0; i < 10; ++i) {
+            step_full_cycle(top, tfp);
+            if (Verilated::gotFinish()) break;
+        }    
     }
 
     // Finish
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 100; ++i) {
         step_full_cycle(top, tfp);
         if (Verilated::gotFinish()) break;
     }

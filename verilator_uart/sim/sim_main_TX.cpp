@@ -180,7 +180,7 @@ int main(int argc, char** argv) {
     }
 
     // Quick TX test: write 'A' to WDATA
-    if (!tl_write32(top, tfp, UART_WDATA, 0x55)) {
+    if (!tl_write32(top, tfp, UART_WDATA, 0xFF)) {
         fprintf(stderr, "WDATA write failed\n");
         tfp->close(); top->final(); delete tfp; delete top; return 1;
     }

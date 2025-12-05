@@ -84,6 +84,7 @@ TB_LIST = \
 
 CPP_RX = sim/sim_main_RX.cpp
 CPP_TX = sim/sim_main_TX.cpp
+CPP_GB = sim/sim_global.cpp
 
 # ===== Verilator flags =====
 
@@ -105,7 +106,7 @@ VERILATOR_FLAGS += --timescale-override 1ns/1ps
 
 
 # ===== Targets =====
-all: build_rx run
+all: build_global run
 
 prepare:
 	@mkdir -p external || true
@@ -114,6 +115,23 @@ prepare:
 	echo "  git clone https://github.com/lowRISC/opentitan.git $(OT)"; \
 	exit 1; \
 	fi
+
+# ORDER: stubs -> ALL packages (priority first) -> PRIM/TLUL others -> UART -> TB/CPP
+build_global: prepare
+	@echo "==> Packages (priority first):"
+	@echo "  PRIM_CORE_PKGS = $(PRIM_CORE_PKGS)"
+	@echo "  TLUL_PKG       = $(TLUL_PKG)"
+	verilator $(VERILATOR_FLAGS) --cc --exe --build \
+	-I$(PRIM_DIR) -I$(TLUL_DIR) -I$(PRIM_GENERIC_DIR) \
+	$(STUBS) \
+	$(PKG_ORDERED) \
+	rtl/top_racl_pkg.sv \
+	$(SV_OTHERS) \
+	$(RTL_UART) \
+	$(TB_LIST) $(CPP_GB) \
+	--top-module top_uart_tb \
+	-o Vtop_uart_tb
+
 
 # ORDER: stubs -> ALL packages (priority first) -> PRIM/TLUL others -> UART -> TB/CPP
 build_tx: prepare
