@@ -1,1 +1,6 @@
 opentitan/
+.venv/
+scratch/
+dataset/
+*.crdownload
+PERSEUS_dataset/
