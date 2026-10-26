@@ -67,6 +67,7 @@ index.csv          one row per run: ip, test, seed, status, truncated, trace, te
   and have `truncated` true. uart, i2c and spi_host were simulated before the cap existed, so all of
   their traces are complete.
 - X-propagation was disabled (`--xprop-off`): Xcelium 23.03 crashes elaborating several IPs with it.
+- IPs are built with Earl Grey's top-level parameters (`top_pkg`, `top_racl_pkg`).
 
 ## Pass / fail
 `status` is the testbench verdict: `TEST PASSED CHECKS`, and no UVM_ERROR/UVM_FATAL or simulator

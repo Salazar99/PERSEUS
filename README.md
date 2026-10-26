@@ -39,6 +39,11 @@ README.md describes the dataset.
 All runs use `--xprop-off`, because `-xprop F` crashes xmelab 23.03 on several IPs. pwm is rendered
 from `hw/ip_templates/pwm` with ipgen on the first run.
 
+IPs are built with Earl Grey's top-level parameters. On its own, FuseSoC picks the provider of
+`top_pkg`/`top_racl_pkg`/`ast_pkg` (Earl Grey, Darjeeling or English Breakfast) by directory order. That
+choice changes TL-UL and RACL widths from one checkout to another. `setup.sh` therefore adds
+`--mapping=lowrisc:systems:top_earlgrey:0.1` to `opentitan/hw/dv/tools/dvsim/common_sim_cfg.hjson`.
+
 To re-package one IP without re-simulating (its scratch dir must still exist):
 `python3 collect_dataset.py <ip_root> scratch/<ip>/<branch>/<dut>-sim-xcelium dataset/<ip>`, then
 `.venv/bin/python export_dataset.py`. The export hard-links files from `dataset/`, so it takes no
@@ -47,7 +52,7 @@ extra disk.
 ## Files
 | file | role |
 |---|---|
-| `setup.sh` | pinned OpenTitan + venv + Xcelium checks |
+| `setup.sh` | pinned OpenTitan (+ Earl Grey FuseSoC mapping), venv, Xcelium checks |
 | `env.sh` | Xcelium, license and venv environment (`XCELIUM_SETUP`, `CDS_LIC_FILE` overridable) |
 | `run_campaign.sh` | dvsim on every IP, then collect, then export |
 | `dump_dut.tcl` | dvsim `--dump-script`: gzipped, size-capped VCD of `tb.dut` |

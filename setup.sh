@@ -5,16 +5,24 @@
 set -u
 PERSEUS=$(cd "$(dirname "$0")" && pwd)
 OT_SHA=d3bb73a94855cdc00651cb51315d655e734b9cdc  # OpenTitan commit the published dataset was built from
-OT_URL=https://github.com/lowRISC/opentitan.git
+OT_URL=${OT_URL:-https://github.com/lowRISC/opentitan.git}  # override to use a mirror
 cd "$PERSEUS" || exit 1
 missing=()
 
-# OpenTitan at the pinned commit (shallow fetch of exactly that commit).
-if [ ! -d opentitan/.git ]; then
+# OpenTitan at the pinned commit (shallow fetch of exactly that commit; retried if a fetch broke).
+if ! git -C opentitan rev-parse -q --verify HEAD >/dev/null 2>&1; then
   git init -q opentitan && git -C opentitan fetch -q --depth 1 "$OT_URL" "$OT_SHA" \
     && git -C opentitan checkout -q -B perseus FETCH_HEAD || exit 1
 fi
 [ "$(git -C opentitan rev-parse HEAD)" = "$OT_SHA" ] || { echo "ERROR: opentitan/ is not at $OT_SHA" >&2; exit 1; }
+
+# FuseSoC otherwise picks the provider of top_pkg / top_racl_pkg / ast_pkg (Earl Grey, Darjeeling or
+# English Breakfast) by directory order, so IP parameters (e.g. TL-UL and RACL widths) change between
+# checkouts. Pin them to Earl Grey through that top's FuseSoC mapping section.
+cfg=opentitan/hw/dv/tools/dvsim/common_sim_cfg.hjson
+grep -q "lowrisc:systems:top_earlgrey:0.1" "$cfg" ||
+  sed -i 's|"--mapping=lowrisc:prim_generic:all:0.1"|&, "--mapping=lowrisc:systems:top_earlgrey:0.1"|' "$cfg"
+grep -q "lowrisc:systems:top_earlgrey:0.1" "$cfg" || { echo "ERROR: could not pin FuseSoC mappings in $cfg" >&2; exit 1; }
 
 # Python venv with OpenTitan's hash-pinned requirements (dvsim, fusesoc, hjson, ...).
 if [ ! -x .venv/bin/dvsim ]; then
